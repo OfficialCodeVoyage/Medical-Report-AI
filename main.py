@@ -18,7 +18,6 @@ apikey = os.environ.get("API_KEY")
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-# apikey='AIzaSyBNJII7yP-bxU42RNeZ-QrM-C3rRpQso8k'
 
 
 
@@ -78,9 +77,9 @@ def index():
 
     return render_template('index.html',show_result=show_result)
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
 
-# 	# run() method of Flask class runs the application 
-# 	# on the local development server.
-# 	app.run(debug=True)
+	# run() method of Flask class runs the application 
+	# on the local development server.
+	app.run(debug=True)
     
