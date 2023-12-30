@@ -14,7 +14,6 @@ from dotenv import load_dotenv
 load_dotenv()
 apikey = os.environ.get("API_KEY")
 
-print(apikey)
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
@@ -63,7 +62,7 @@ def index():
             temp_file.close()
             # Get the absolute URL for the temporary file
             temp_url = f"{request.url_root}{url_for('uploaded_file', filename=os.path.basename(temp_file_path))}"
-            print('check', temp_url)
+            # print('check', temp_url)
 
             # Call the Google API function with the temporary file URL
             result = generate_summary_with_image(temp_url)
